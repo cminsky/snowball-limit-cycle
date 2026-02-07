@@ -249,7 +249,7 @@ def get_times(t, snowball, return_dict=False):
 
     # handle case where series ends within a snowball
     if n > 0 and snowball[-1]:
-        snowball_ends.append(t[-1])
+        snowball_ends.append(np.nan)
 
     # compute snowball durations
     snowball_durations = [end - start for start, end in zip(snowball_starts, snowball_ends)]
